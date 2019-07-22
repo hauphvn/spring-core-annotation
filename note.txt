@@ -1,0 +1,23 @@
+------Annotation configuration--------
+add schema: context
+- Tim hieu: annotation config va annotation scan
+--Annotation config:
+Bao gom: @Required, @Autowired, @PostConstruct, @PerDestroy, @Resource
+Cho phep ta su dung annotation da khai bao trong bean cua annotation context
+--Annotation scan:
+Bao gom: @Component, @Repository, @Controller, @Service, @RestController, @ControllerAdvice, @Configuration
+Dam nhan cong viec tuong tu annotation config nhung con nhung nhiem vu khac la:
+- scan 1 package tim nhung bean trong annotation context
+-------How to use--------------
+Thay vi ta them autowired = constructor nhu trong xml configuration
+1.Ta them vao tren dau cua method constructor cua java class
+@Autowired
+public Student(fsdfsdf..){
+
+}
+
+2. Ta phai them vao file context.xml
+<context:annotation-config/>
+ <context:component-scan base-package="edu.springcore"/> // tuong tu cai tren
+ Vi  <context:component-scan base-package="edu.springcore"/> default se active
+ annotation-config
