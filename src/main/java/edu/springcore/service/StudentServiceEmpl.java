@@ -5,9 +5,11 @@ import edu.springcore.model.Student;
 import edu.springcore.repository.StudentRepository;
 import edu.springcore.repository.StudentRepositoryEmpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service("studentService")
 public class StudentServiceEmpl implements StudentService{
 
     /*//Day la hard code: no se dung ham khoi tao khong tham so.

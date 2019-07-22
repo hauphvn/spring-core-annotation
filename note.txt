@@ -16,8 +16,40 @@ public Student(fsdfsdf..){
 
 }
 
+2.     <bean name="studentRepository" class="edu.springcore.repository.StudentRepositoryEmpl">
+       </bean>
+
+       De thay the bean do, ta vao class Repository tuong ung
+       Them @Repository truoc class do
+
+@Repository("studentRepository")
+public class StudentRepositoryEmpl implements StudentRepository{
+
+
+    @Override
+    public List<Student> getAll(){
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(1, "Jack"));
+        return students;
+    }
+}
+
 2. Ta phai them vao file context.xml
 <context:annotation-config/>
  <context:component-scan base-package="edu.springcore"/> // tuong tu cai tren
  Vi  <context:component-scan base-package="edu.springcore"/> default se active
  annotation-config
+
+ -------Stereotype Annotation--------
+ La mot dang annotation mapper
+ Co nhieu dang: @Required, @Service, @Component
+ @Repository la stereotype cho Persistence, DAO
+ @Service la stereotype de map voi service player
+ @Component la subclass cua @Controller, @Repository, @Service
+ Khi chung ta khong biet phat khai bao loai nao cho class do
+ thi ta cu khai bao no la @Component
+
+ De dang de viet AOP pointcut.
+ Khong can dinh nghia cac bean tung class trong context
+ ma chi can su dung annotation ngay trong class java do
+

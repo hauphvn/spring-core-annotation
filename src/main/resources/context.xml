@@ -7,10 +7,5 @@
 
 <!--    <context:annotation-config/>-->
     <context:component-scan base-package="edu.springcore"/>
-    <bean name="studentRepository" class="edu.springcore.repository.StudentRepositoryEmpl">
-    </bean>
 
-    <bean name="studentService" class="edu.springcore.service.StudentServiceEmpl">
-<!--        <property name="studentRepository" ref="studentRepository"/>-->
-    </bean>
 </beans>

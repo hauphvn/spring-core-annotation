@@ -1,11 +1,14 @@
 package edu.springcore.repository;
 
 import edu.springcore.model.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("studentRepository")
 public class StudentRepositoryEmpl implements StudentRepository{
+
 
     @Override
     public List<Student> getAll(){
