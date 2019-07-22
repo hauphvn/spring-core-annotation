@@ -53,3 +53,18 @@ public class StudentRepositoryEmpl implements StudentRepository{
  Khong can dinh nghia cac bean tung class trong context
  ma chi can su dung annotation ngay trong class java do
 
+-----@Autowired member injection-------
+Thay vi ta de tren day:
+   @Autowired
+    public StudentServiceEmpl(StudentRepository studentRepository) {
+        System.out.println("Construct has a param");
+        this.studentRepository = studentRepository;
+    }
+
+ Ta se de @Autowired o day:
+ @Autowired
+ private StudentRepository studentRepository;
+
+ -------@Autowired Construction-----------
+ Ta chi can de @Autowired tren dau ham Constructor
+

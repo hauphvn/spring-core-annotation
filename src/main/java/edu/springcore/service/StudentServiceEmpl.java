@@ -17,6 +17,7 @@ public class StudentServiceEmpl implements StudentService{
     //Nen se su dung Spring bean
     private StudentRepository studentRepository = new StudentRepositoryEmpl();*/
 
+    @Autowired
     private StudentRepository studentRepository;
 
     //Cach su dung Setter Injection
@@ -37,7 +38,6 @@ public class StudentServiceEmpl implements StudentService{
         System.out.println("Constructor no param");
     }
 
-    @Autowired
     public StudentServiceEmpl(StudentRepository studentRepository) {
         System.out.println("Construct has a param");
         this.studentRepository = studentRepository;
